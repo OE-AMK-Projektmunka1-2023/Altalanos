@@ -3,22 +3,41 @@
 ## Csapatok összeállítása
 
 A félév elején a kurzus hallgatóiból 2-3 fős csapatokat állítunk össze. Ennek megszervezése alapvetően a hallgatók feladata. Ezt
-[Ennek a táblázatnak](https://docs.google.com/spreadsheets/d/1IrYP29BsdDP29CFXExsv_rgTbKuD0-In80B1lQNJsZ4/edit#gid=0)
+[Ennek a táblázatnak](https://docs.google.com/spreadsheets/d/1BPvd-QJT9Fd2HLqn0v-txxHA3oMNaa7M44eLx-d2CMs/edit#gid=0)
 a segítségével lehet megtenni. Értelemszerűen a "csapat sorszáma" oszlopba kell beírni
 a csapat sorszámát. A táblázatot később letisztázom és a kimaradó emberekből (ha
 lesznek) véletlenszerűen állítok össze csapatokat.
 
 ## Verziókövetés
 
-A csapatoknak a készülő kódot és a dokumentációt egy GitHub repositoryban kell
-verziókövetve tárolniuk. Ehhez mindenkinek regisztrálnia kell a GitHubra és
-a felhasználónevét be kell írnia a feljebb már említett [táblázatba](https://docs.google.com/spreadsheets/d/1IrYP29BsdDP29CFXExsv_rgTbKuD0-In80B1lQNJsZ4/edit#gid=0).
+A kurzus egyik célja a Git használatának elsajátítása. Ez azt jelenti, hogy ahelyett,
+hogy a csapattagok a kódrészleteket például e-mailben, Messengeren stb. osztanák meg
+egymással, a változásokat Git használatával követik. Ez egyben azt is jelenti, hogy
+a Git repositoryban nem csak a kész, működő verziónak kell szerepelnie, hanem látszani
+kell annak is, hogy a félév során mi történik.
 
-Minden csapatnak létre fogok hozni egy repositoryt, aminek a linkje
-például a következő lehet:
-[https://github.com/OE-AMK-Projektmunka2-2022/PL2022B_20](https://github.com/OE-AMK-Projektmunka2-2022/PL2022B_20)
+A csapatoknak a készülő kód és az egyéb fájlok mellett a dokumentációt is ugyanebben a
+GitHub repositoryban kell (verziókövetve) tárolniuk.
 
-A GitHub használatát egy másik dokumentum tartalmazza.
+Ehhez mindenkinek regisztrálnia kell a GitHubra és a felhasználónevét be kell írnia a
+feljebb már említett [táblázatba](https://docs.google.com/spreadsheets/d/1BPvd-QJT9Fd2HLqn0v-txxHA3oMNaa7M44eLx-d2CMs/edit#gid=0). Ha ez megtörtént, a csapattagokat meghívom a megfelelő repositoryba.
+A meghívás után a csapattag nevét **sárgára** színezem a táblázatban.
+
+A meghívóról a GitHub e-mail értesítést küld, ahol egy linkre kattintva el is kell azt fogadni.
+Ezt rendszeresen ellenőrzöm. Ha minden rendben van, akkor a táblázatban az adott személyt
+**zöldre** állítom. Erre a folyamatra egy hét áll rendelkezésre. Aki ennek nem tesz határidőre eleget,
+azt szankcionálni fogom.
+
+A repository linkje a következőhöz hasonló lesz:
+[https://github.com/OE-AMK-Projektmunka1-2023/PL2023A_20](https://github.com/OE-AMK-Projektmunka1-2023/PL2023A_20)
+
+### A fejlesztői környezet beállítása a Githez
+
+A fejlesztés első (vagy inkább nulladik) lépése a fejlesztőrendszer beállítása a Githez. A legtöbb
+IDE képes a Gittel együttműködni, azonban mindegyiket egy kicsit máshogy kell beállítani. Egy
+további lehetőség akár egy grafikus, akár az alap parancssoros Git kliens használata.
+
+Addig senki ne kezdjen hozzá a fejlesztéshez, amíg a Git használata nem megy rutinszerűen.
 
 ### README.md
 
@@ -65,7 +84,12 @@ Néhány példa:
 
 A változásokat commitok formájában lehet a verziókövetőbe feltölteni. Minden
 commithoz szükséges kitölteni a "commit message"-et is. A feltöltéshez
-csak végső esetben használjuk a "file upload" funkciót!
+csak **NE** használjuk a "file upload" funkciót!
+
+A csapatok a félév során **rendszeresen** kell, hogy commitokat készítsenek.
+Mivel a "rendszeresen" szónak való megfelelést nehéz utólag elbírálni,
+így a következő konkrét mérőszámok az irányadóak. Egy valós fejlesztés
+során persze ennél minimum egy nagyságrenddel több commit szokott születni.
 
 **A kurzus során elvárás, hogy legyen legalább 10 olyan hét, amikor ÉRDEMI
 változás történik a repositoryban és ezt a commitok dátuma is tükrözi.**
@@ -79,99 +103,23 @@ naplóban, vagy akár valamilyen, a projekthez kapcsolódó ötlet, vagy kísér
 
 # Témák
 
-A következőkben néhány témajavaslat kerül felsorolásra. Ezek egy része konkrét,
-de vannak általános, sokféle irányba elvihető ötletek is.
+A következőkben néhány témajavaslat kerül felsorolásra. Ezek nagyrészt nem
+konkrét, minden tekintetben kidolgozott feladatok, hanem inkább ötletek.
+A pontos részleteket pontosan emiatt minden esetben egyeztessük.
 
-## Rubik kocka kirakását segítő program
+## Képfeldolgozási algoritmusokon alapuló projekt Webkamerával, vagy Raspberry Pi kamerával
 
-A projekt célja egy olyan program létrehozása, ami egy összekevert Rubik kockáról
-webkamera segítségével különböző szögekből felvételeket készít, felismeri az
-egyes elemek helyzetét, majd egy lehetséges kirakást generál.
+Lehetséges projekt irányok:
 
-Az egyes megvalósítandó elemek a következők:
-
- * Webkamera kezelésének megoldása, képek automatizált készítése
- * Kockaelemek színének azonosítása
- * Kockaállapotok és forgatások modellezése
- * Forgatási sorrend generálása
+  * Arcfelismerés, objektumfelismerés
+  * Számok, vagy szövegek felismerése
+  * Vonalkódok, QR kódok felismerése
+  * Fiduciális markerek felismerése
+  * Testpóz, vagy kézpóz felismerés
 
 A megvalósításhoz Python és OpenCV használata ajánlott.
 
-## Kártyák kombinálásán, mozgatásán alapuló társasjáték online megvalósítása
-
-Az Imagine egy olyan tásasjáték, ahol valamilyen feladványt (például
-egy szót, kifejezést, közmondást, film, vagy zenecímet) kell kártyák
-segítségével elmagyarázni. Az átlátszó kártyákon valamilyen (sok esetben többértelmű,
-vagy absztrakt) ábra van, amiket egymásra tehetünk, vagy akár mozgathatunk
-(animálhatunk) is.
-
-A projekt célja, hogy egy, az Imagine-hez hasonló játékot hozzunk
-létre, amit online játszhatunk. Az eredeti játékhoz sem a feladványok,
-sem a konkrét kártyák tekintetében nem feltétlenül ragaszkodni.
-
-Az egyes megvalósítandó elemek a következők:
-
- * Kártyák és feladványok megszerkesztése
- * Kártyák kiválasztása és felrakása a játéktérre
- * Kártyák levétele a játéktárről
- * Kártyák mozgatása
- * Rámutatás, letakarás lehetőségének megoldása
- * Játéktér megjelenítése egyetlen számítógépen
- * Játéktér folyamatos szinkronizációja az egyes számítógépek között
-(felhő szolgáltatáson, web backenden, centralizált szerveren keresztül stb.)
- * Az egyes játékosok összekapcsolásának megoldása, authentikáció
-
-Az eredeti játékban lehetőség van a kártyák három dimenzióban való mozgatására is.
-Ettől ebben az esetben el kell tekintenünk. Nincs szükség továbbá a játék közben
-a hang átvitelének megoldására sem (erre már számos egyéb megoldás rendelkezésre
-áll).
-
-A játék akár webalkalmazásként, akár desktop programként elképzelhető.
-
-## Kártya alapú társasjáték online megvalósítása
-
-Számos olyan társasjáték létezik, amit nagyrészt, vagy teljes egészében kártyákkal
-kell játszani. Míg a hagyományos kártyajátékokra (például poker, snapszer, ulti)
-számos online megoldás létezik, az újabb típusú kártyajátékok közül ez csak
-néhányról mondható el (például az Exploding Kittens-nek és az EladLak!-nak van
-online változata, viszont a Travelin'-nek nincs).
-
-Általában ezek a játékok a következő főbb játékelemekből építkeznek:
-
- * A játékosoknál levő lapok, amelyekből egy adott mennyiségű a játék elején
-kerül kiosztásra
- * Húzópakli, amiből bizonyos alkalmakkor (például a játékos körének elején,
-vagy bizonyos kártyák aktiválásakor) megadott mennyiségű lapot fel kell húzni
- * Dobópakli, ahova a felhasznált lapok kerülnek és azonnan bizonyos játékok
-esetén szintén húzhatunk
- * Kijátszott kártyák (általában pontértékkel), amiket minden játékos maga előtt gyűjt
- * Kezdőjátékos kiválasztásának szabálya
- * A kör iránya (bizonyos játékoknál ez megfordítható)
- * Kártyatípusok (például akciókártyák, támadó és támadást kivédő kártyák, körön kívül
-is felhasználhatunk
- * "Játék vége" feltétel
- * Nyertes kiválasztására vonatkozó szabály
-
-Az egyes megvalósítandó elemek a következők:
-
- * Játék kiválasztása, vagy kigondolása
- * Kártyalapok elkészítése
- * Kártyák követése (melyik kártya hol van, húzópakli és dobópakli sorrendje, adatszerkezetek megtervezése
- * Játéktér kinézetének megtervezése (kezünkben levő lapok, kijátszott lapok stb.)
- * Aktuálisan következő játékos követése
- * Játékos körében elvégzendő feladatok végigkövetése, választási lehetőségek felajánlása
- * Felhasználói interakciók kidolgozása (hogyan tudunk kijátszani egy kártyát, hogyan tudunk akciókat összekombinálni, esetleg passzolni, támadás esetén támadott játékost kiválasztani stb.)
- * Akciók validálása (például ne tudjunk több lapot felhúzni, mint amennyit szabad,
-ne tudjunk már kijátszott lapot újra kijátszani stb.)
- * "Játék vége" feltétel figyelése, győztes kiválasztása
- * Játéktér megjelenítése egyetlen számítógépen
- * Játéktér szinkronizációja az egyes számítógépek között
-(felhő szolgáltatáson, web backenden, centralizált szerveren keresztül stb.)
- * Az egyes játékosok összekapcsolásának megoldása, authentikáció
-
-A játék akár webalkalmazásként, akár desktop programként elképzelhető.
-
-## Tangram társasjáték online megvalósítása
+## Tangram társasjáték számítógépes megvalósítása
 
 A tangram egy ősi kínai logikai játék, melynek célja, hogy egy,
 a körvonalával meghatározott formát előre meghatározott síkidomokból
@@ -202,7 +150,21 @@ allként elképzelhető.
 
 ## Játék Arduinoval és OLED kijelzővel
 
+A projekt célja egy (például breadboardon összerakott) Arduino alapú hardverösszeállítás
+és egy rajta futtatható, élvezhető játék elkészítése.
+
+A vezérlőegység lehet például egy Arduino Uno, vagy egy ESP32. Megjelenítőként 128x64 pixeles
+OLED kijelző használható. Az irányítóeszköz nyomóbombokból állhat.
+
+Magára a játékra sokféle lehetőség van. Például lehet valamilyen labirintus, vagy logikai játék.
+
+A fizikai hardver helyett Wokwi szimulátor is használható
+
+## Okos otthon megvalósítása NodeRed segítséglvel
+
+## WiFi aktivitás mérése Raspberry Pi segítségével
+
 ## Beszélő óra, beszélő konyhai időzítő
 
-## Beszélő ellenállásmérő
+## Beszélő műszer
 
