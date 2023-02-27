@@ -168,3 +168,6 @@ A fizikai hardver helyett Wokwi szimulátor is használható
 
 ## Beszélő műszer
 
+## Tranziens jelek vizsgálata Arduinoval
+
+
