@@ -197,4 +197,10 @@ tudunk válogatni.
 
 ## Tranziens jelek vizsgálata Arduinoval
 
+Egy kontaktus átváltása (például egy kapcsoló, vagy relé ki- vagy bekapcsolása) soha nem
+az áramkör egyszeri nyitása, vagy zárása, hanem ezek gyors ismétlése során létrejövő
+tranziens folyamat (prellezés). Az egyik lehetséges feladat ennek a jelenségnek a
+vizsgálata Arduino segítségével, lehetőleg automatizáltan.
 
+Egy másik tranziens jelenség az izzólámpa be- és kikapcsolása, ahol számunkra
+az izzószál áramának / ellenállásának változása az érdekes.
