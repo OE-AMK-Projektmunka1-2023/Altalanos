@@ -213,3 +213,13 @@ vizsgálata Arduino segítségével, lehetőleg automatizáltan.
 
 Egy másik tranziens jelenség az izzólámpa be- és kikapcsolása, ahol számunkra
 az izzószál áramának / ellenállásának változása az érdekes.
+
+## Numpad-flyer játék
+
+
+
+## Accele-pong játék
+
+Az Accele-Pong játék a közismert Ponghoz hasonló, de itt az ütőket a játékosok egy-egy
+gyorsulásérzékelő elforgatásával egy kör mentén tudják elhelyezni. A játékhoz egy
+irányító már készen van. A játék például PyGame, vagy Unity alatt valósítható meg.
